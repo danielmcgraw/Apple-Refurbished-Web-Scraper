@@ -1,0 +1,19 @@
+I’ve been looking for a refurbished mac for development recently and found myself leaving the refurbished site window open in the background and constantly checking the page. What a waste of time. Solution: write a web scraper to do the work for me. Below is a super simple scraper I wrote up that looks at Apple’s refurbished page and scrapes for search terms (e.g. Mac mini, iMac, etc.). If new computers are listed that match your criteria it will shoot off an email (using a gmail account) to you with the listings description, price, and product URL.
+
+The usage is simple.
+From a prompt start up python.
+>>> import AppleRefurbScraper
+>>> scraper = AppleRefurbScraper.RefurbScraper('Gmail from address', 'Gmail from password', 'To address', 'search term', 'loop delay time in seconds')
+>>> scraper.loop()
+
+The search terms are case sensitive. The applicable search terms are:
+MacBook
+MacBook Air
+MacBook Pro
+Mac mini
+iMac
+Mac Pro
+Xserve
+Also note that I use regex to match the search term so feel free to use a regex string as the search term.
+
+If you like this project please check out my site(http://danielmcgraw.com/) subscribe to my feed(http://danielmcgraw.com/feed/), and follow me on twitter(http://twitter.com/danielmcgraw) or tumblr(http://danielmcgraw.tumblr.com/) and say hi.
